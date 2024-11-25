@@ -1,0 +1,25 @@
+<div class="registration-section">
+  <h2>User Registration</h2>
+  <label for="registration-number">Registration Number:</label>
+  <input type="text" id="registration-number" [(ngModel)]="registrationNumber" placeholder="Enter registration number" class="registration-input" />
+  <button class="submit-button" (click)="searchScores()">Submit</button>
+</div>
+
+<div *ngIf="scores">
+  <h3>Scores:</h3>
+  <div class="scores-display">
+    <p><strong>Toán:</strong> {{ scores.toan }}</p>
+    <p><strong>Ngữ Văn:</strong> {{ scores.ngu_van }}</p>
+    <p><strong>Ngoại Ngữ:</strong> {{ scores.ngoai_ngu }}</p>
+    <p><strong>Vật Lý:</strong> {{ scores.vat_li }}</p>
+    <p><strong>Hóa Học:</strong> {{ scores.hoa_hoc }}</p>
+    <p><strong>Sinh Học:</strong> {{ scores.sinh_hoc }}</p>
+    <p><strong>Lịch Sử:</strong> {{ scores.lich_su }}</p>
+    <p><strong>Địa Lý:</strong> {{ scores.dia_li }}</p>
+    <p><strong>GDCD:</strong> {{ scores.gdcd }}</p>
+  </div>
+</div>
+
+<div *ngIf="!scores && registrationNumber">
+  <p>No scores found for registration number: {{ registrationNumber }}</p>
+</div> 

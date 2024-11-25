@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.container {
+  display: flex;
+  height: calc(100vh - 60px);
+}
+
+.sidebar {
+  width: 250px;
+  background: linear-gradient(to bottom, #f0c040, #f0a040);
+  padding: 20px;
+}
+
+.sidebar h2 {
+  color: #fff;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px 0;
+  color: #fff;
+  cursor: pointer;
+}
+
+.sidebar li.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  border-left: 1px solid #ccc;
+}
+
+.registration-section, .scores-section {
+  margin: 20px 0;
+}
+
+.registration-input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}

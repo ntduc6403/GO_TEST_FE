@@ -1,0 +1,25 @@
+<div>
+  <h2>Top 10 Students</h2>
+  <table>
+    <tr>
+      <th>SBD</th>
+    </tr>
+    <tr *ngFor="let student of topStudents">
+      <td>{{ student.sbd }}</td>
+    </tr>
+  </table>
+
+
+<div>
+  <h2>Score Level Report</h2>
+  <div *ngIf="scoreLevelReport">
+    <div *ngFor="let subject of ['toan', 'vat_li', 'hoa_hoc', 'ngu_van', 'ngoai_ngu', 'sinh_hoc', 'lich_su', 'dia_li', 'gdcd']">
+      <canvas 
+        baseChart 
+        [data]="scoreLevelChartData[subject]"
+        [options]="barChartOptions"
+        [legend]="barChartLegend">
+      </canvas>
+    </div>
+  </div>
+</div>
